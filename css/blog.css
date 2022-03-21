@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+@keyframes bg-color {
+  0% {
+    background-color: #f1c40f;
+  }
+
+  10% {
+    background-color: #f1c40f;
+  }
+
+  20% {
+    background-color: #ffd700;
+  }
+
+  45% {
+    background-color: #ff1493;
+  }
+
+  60% {
+    background-color: #dda0dd;
+  }
+
+  75% {
+    background-color: #3498db;
+  }
+
+  80% {
+    background-color: #66cdaa;
+  }
+
+  90% {
+    background-color: #ffffe0;
+  }
+
+  100% {
+    background-color: #f1c40f;
+  }
+}
+
+/* 印刷用スタイル */
+@media print {
+  .animated {
+    /* すべて表示 */
+    opacity: 1;
+  }
+}
+
+html {
+  font-family: 'El Messiri', sans-serif;
+}
+
+body {
+  font-size: 0.9rem;
+  display: block;
+  margin: 0;
+  width: 100vw;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  display: inline-block;
+}
+
+.wrapper {
+  padding: 0 4%;
+  text-align: center;
+  width: 100vw;
+}
+
+/*-------------------------------------------
+ナビバー
+-------------------------------------------*/
+#navbar ul {
+  width: 100%;
+  animation: bg-color 15s infinite;
+}
+
+#navbar li {
+  display: inline-block;
+}
+
+#navbar .nav-title {
+  margin-left: 2vw;
+}
+
+#navbar a {
+  padding: 0 auto;
+}
+
+#navbar .nav-list-left {
+  margin-left: 70vw;
+}
+
+#navbar .contact {
+  text-decoration: line-through;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 2vw auto;
+  animation: bg-color 15s infinite;
+}
+
+#header ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+#header li {
+  margin-left: 30px;
+}
+
+#header .nav-title {
+  font-size: 2vw;
+}
+
+#header .nav-list-lef,
+#header .blog,
+#header .contact {
+  font-size: 1.2vw;
+}
+
+#header li a:hover {
+  opacity: 0.7;
+}
+
+/*-------------------------------------------
+news
+-------------------------------------------*/
+#news {
+  background-color: #ffffff;
+  height: 270px;
+  margin-bottom: 40px;
+  border-top: solid 5px #ffffff;
+}
+
+#news .page-title {
+  background-color: #deb887;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*-------------------------------------------
+topic
+-------------------------------------------*/
+#topic {
+  height: 350px;
+}
+
+.blog-title {
+  visibility: hidden;
+}
+
+.blog-title p {
+  font-size: 35px;
+}
+
+.blog-title img:hover {
+  opacity: 0.5;
+}
+
+.blog-title.slick-initialized {
+  visibility: visible; /*slick-initializedが付与されたら表示*/
+}
+
+/*-------------------------------------------
+article(左側、記事部分)
+-------------------------------------------*/
+article {
+  font-family: 'Prompt', sans-serif;
+  width: 74%;
+  border: solid 5px #000000;
+}
+
+article img {
+  margin-bottom: 20px;
+}
+
+article p {
+  margin-bottom: 1rem;
+  padding-left: 20px;
+}
+
+.main-title {
+  width: 100%;
+  animation: bg-color 15s infinite;
+}
+
+.blog-article {
+  background: #d2b48c
+}
+
+.space {
+  height: 50px;
+}
+
+/*-------------------------------------------
+sidebar（右側、詳細部分）
+-------------------------------------------*/
+
+aside {
+  width: 22%;
+  background: #d2b48c
+}
+
+aside p {
+  padding: 12px 10px;
+}
+
+.sub-title {
+  animation: bg-color 15s infinite;
+}
+
+.news-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  border-bottom: solid 5px #ffffff;
+  padding-bottom: 25px;
+}
+
+.post-info {
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 40px;
+}
+
+.post-date {
+  background: #0bd;
+  border-radius: 50%;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  font-size: 1.625rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+}
+
+.post-date span {
+  font-size: 1rem;
+  border-top: 1px rgba(255, 255, 255, .5) solid;
+  padding-top: 6px;
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+}
+
+.post-title {
+  color: #000000;
+  font-family: 'Prompt', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.post-title,
+.post-cat {
+  margin-left: 120px;
+}
+
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  font-size: 0.5rem;
+  animation: bg-color 15s infinite;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #000000;
+}
