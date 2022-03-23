@@ -55,6 +55,8 @@ body {
   display: block;
   margin: 0;
   width: 100vw;
+  background-image:url(../img/block.jpg);
+  background-repeat: repeat;
 }
 
 a {
@@ -148,10 +150,8 @@ h2 {
 news
 -------------------------------------------*/
 #news {
-  background-color: #ffffff;
   height: 270px;
   margin-bottom: 40px;
-  border-top: solid 5px #ffffff;
 }
 
 #news .page-title {
@@ -175,7 +175,12 @@ topic
   font-size: 35px;
 }
 
+.blog-title img {
+  height: 250px;
+}
+
 .blog-title img:hover {
+  height: 250px;
   opacity: 0.5;
 }
 
@@ -187,18 +192,27 @@ topic
 article(左側、記事部分)
 -------------------------------------------*/
 article {
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Bungee', cursive;
   width: 74%;
   border: solid 5px #000000;
 }
 
 article img {
   margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
 }
 
 article p {
   margin-bottom: 1rem;
   padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  text-align: left
+}
+
+article a {
+  text-align: center;
 }
 
 .main-title {
@@ -207,11 +221,15 @@ article p {
 }
 
 .blog-article {
-  background: #d2b48c
+  background: #dcdcdc
 }
 
 .space {
   height: 50px;
+}
+
+.explain{
+  font: bold;
 }
 
 /*-------------------------------------------
@@ -220,7 +238,8 @@ sidebar（右側、詳細部分）
 
 aside {
   width: 22%;
-  background: #d2b48c
+  background: #dcdcdc;
+  border: solid 5px #000000;
 }
 
 aside p {
@@ -235,7 +254,6 @@ aside p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
-  border-bottom: solid 5px #ffffff;
   padding-bottom: 25px;
 }
 
@@ -269,7 +287,7 @@ aside p {
 
 .post-title {
   color: #000000;
-  font-family: 'Prompt', sans-serif;
+  font-family: 'El Messiri', sans-serif;
   font-size: 2rem;
   font-weight: normal;
 }
