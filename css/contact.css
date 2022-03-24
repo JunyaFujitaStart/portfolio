@@ -1,5 +1,88 @@
 @charset "UTF-8";
 
+@keyframes bg-color {
+  0% {
+    background-color: #f1c40f;
+  }
+
+  10% {
+    background-color: #f1c40f;
+  }
+
+  20% {
+    background-color: #ffd700;
+  }
+
+  45% {
+    background-color: #ff1493;
+  }
+
+  60% {
+    background-color: #dda0dd;
+  }
+
+  75% {
+    background-color: #3498db;
+  }
+
+  80% {
+    background-color: #66cdaa;
+  }
+
+  90% {
+    background-color: #ffffe0;
+  }
+
+  100% {
+    background-color: #f1c40f;
+  }
+}
+
+/* 印刷用スタイル */
+@media print {
+  .animated {
+    /* すべて表示 */
+    opacity: 1;
+  }
+}
+
+html {
+  font-family: 'El Messiri', sans-serif;
+}
+
+body {
+  font-size: 0.9rem;
+  display: block;
+  margin: 0;
+  width: 100vw;
+  background-image:url(../img/block.jpg);
+  background-repeat: repeat;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  display: inline-block;
+}
+
+.wrapper {
+  padding: 0 4%;
+  text-align: center;
+  width: 100vw;
+}
+
+
 /*-------------------------------------------
 ナビバー
 -------------------------------------------*/
@@ -38,6 +121,7 @@
   align-items: center;
   margin: 0 auto 2vw auto;
   animation: bg-color 15s infinite;
+  
 }
 
 #header ul {
@@ -64,13 +148,14 @@
   opacity: 0.7;
 }
 
-
-/*コンタクト*/
+/*-------------------------------------------
+コンタクト
+-------------------------------------------*/
 #contact {
     background-image: url(../images/contact-bg.jpg);
     min-height: 100vh;
 }
-/* フォーム */
+
 form div {
     margin-bottom: 14px;
 }
@@ -82,8 +167,8 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    background: rgba(255,255,255..5);
-    border: 1px #fff solid;
+    background: #fffafa;
+    border: 1px #000 solid;
     border-radius: 5px;
     padding: 10px;
     font-size: 1rem;
@@ -99,7 +184,22 @@ textarea {
     height: 6rem;
 }
 input[type="submit"]{
-    border: none;
-    cursor: pointer;
-    line-height: 1;
+  font-size: 24px;
+  background-color: #d3d3d3;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font: bold;
+}
+input[type="submit"]:hover {
+  background-color: #b3b3b3;
+  color: #ffffff;
+  border: 2px solid #fff;
+}
+.end-message {
+  display: none;
+}
+
+.false-message {
+  display: none;
 }

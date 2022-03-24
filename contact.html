@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>Jun's portfolio - contact -</title>
-         <meta name="descripition" content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jun's portfolio - contact -</title>
+    <meta name="descripition" content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ">
     <!-- CSS -->
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link href="css/contact.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="css/contact.css" rel="stylesheet">
     
-    </head>
-    
-    <body>
-      <header id="header">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&family=Philosopher:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
         <nav id="navbar">
             <ul>
                 <li class="nav-title">
@@ -30,44 +32,29 @@
             </ul>
         </nav>
     </header>
-        <div id="contact" class="big-bg">
-        <h1 class="site-title">
-          <a href="./index">Jun's portfolio</a>
-      </h1>
-        <nav>
-          <ul>
-            <li>
-              <a href="./index">Profile</a>
-            </li>
-             <li>
-              <a href="./blog.html">Blog</a>
-            </li>
-            <li>
-              <a href="./contact.html">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="wrapper">
-            <h2 class="page-title">Contact</h2>
-                <form action="index.php" method="POST">
-                    <div>
-                        <label for="name">お名前</label>
-                        <input type="text" id="name" name="your-name" required>
-                    </div>
-                
-                    <div>
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="your-email" required>
-                    </div>
-                
-                    <div>
-                        <label for="message">メッセージ</label>
-                        <textarea id="message" name="your-message" required></textarea>
-                    </div>
-        
-                    <input type="submit" class="button" value="送信">
-                </form>
-            </div><!-- /.wrapper -->
-        </div>
-    </body>
+    <div class="wrapper">
+        <h2 class="page-title">Contact</h2>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeV9vHGMReyGn1BnuAvWEPPxIEcl1Z5mkd95hZcYGV71fQCpQ/formResponse" method="post" id="form" onsubmit="submitted = true;">
+            <div>
+                <label for="name">お名前</label>
+                <input type="text" name="entry.2005620554" required></label>
+            </div>
+            <div>
+                <label for="email">メールアドレス</label>
+                <input type="text" name="entry.1045781291" required></label>
+            </div>
+            <div>
+                <label for="message">メッセージ</label>
+                <textarea type="text" name="entry.839337160" required></textarea>
+            </div>
+            <input type="submit" class="button" value="送信">
+        </form>
+        <p class="end-message">送信完了しました！</p>
+        <p class="false-message">送信失敗です</p>
+    </div><!-- /.wrapper -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
 </html>
