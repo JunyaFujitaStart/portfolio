@@ -80,8 +80,12 @@ h2 {
   padding: 0 4%;
   text-align: center;
   width: 100vw;
+  /*display: flex;*/
 }
 
+/*.box, .box2 {*/
+/*  width: 50%;*/
+/*}*/
 
 /*-------------------------------------------
 ナビバー
@@ -203,3 +207,10 @@ input[type="submit"]:hover {
 .false-message {
   display: none;
 }
+
+/*.fade-enter-active, .fade-leave-active {*/
+/*  transition: opacity .5s;*/
+/*}*/
+/*.fade-enter, .fade-leave-to /*.fade-leave-active below version 2.1.8 {
+  opacity: 0;
+}*/

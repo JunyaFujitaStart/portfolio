@@ -22,3 +22,11 @@ $(document).ready(function() {
   });
 
 });
+
+
+// new Vue({
+//   el: '#demo',
+//   data: {
+//     show: true
+//   }
+// })

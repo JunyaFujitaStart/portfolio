@@ -106,10 +106,6 @@ h2 {
   margin-left: 70vw;
 }
 
-#navbar .contact {
-  text-decoration: line-through;
-}
-
 /*-------------------------------------------
 ヘッダー
 -------------------------------------------*/
@@ -230,6 +226,14 @@ article a {
 
 .explain{
   font: bold;
+}
+
+#blog3,#blog4,#blog5,#blog6 {
+  display: none;
+}
+
+#blog2 a, #blog2 iframe {
+  padding-left: 10%;
 }
 
 /*-------------------------------------------

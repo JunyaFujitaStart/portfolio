@@ -112,7 +112,6 @@ li {
 ナビバー
 -------------------------------------------*/
 #navbar ul {
-  position: fixed;
   height: 100px;
   width: 100%;
   animation: bg-color 15s infinite;
@@ -134,11 +133,6 @@ li {
 #navbar .nav-list-left {
   margin-left: 70vw;
 }
-
-#navbar .contact {
-  text-decoration: line-through;
-}
-
 
 /*-------------------------------------------
 ヘッダー
