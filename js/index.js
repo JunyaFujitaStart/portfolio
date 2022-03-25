@@ -16,16 +16,44 @@ $(function() {
  * イベントハンドラの登録
  * ------------------
  */
-/* title1 エフェクト（下→上）  */
-/**
- * animatedクラスを持つ要素が画面内に入ったら
- * Animate.cssのfadeOutUpエフェクトを適用
- */
-$('#title1').waypoint({
+$('#top').waypoint({
   handler(direction) {
-    if(direction === 'down'){
+    if (direction === 'down') {
+    }
+    else if (direction === 'up') {
+      $(this.element).addClass('fadeInUp');
+    }
+  },
+  /**
+   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
+   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
+   */
+  offset: '-20%',
+});
+
+$('#top.animated').waypoint({
+  handler(direction) {
+    if (direction === 'down') {
+      $(this.element).addClass('fadeOutDown');
+    }
+    else if (direction === 'up') {
+      $(this.element).addClass('no-active').removeClass('fadeInUp');
+    }
+  },
+  /**
+   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
+   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
+   */
+  offset: '15%',
+  activeTitle: 'top',
+});
+ 
+$('#title0').waypoint({
+  handler(direction) {
+    if (direction === 'down') {
       $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    } else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).addClass('fadeOutUp');
     }
   },
@@ -35,12 +63,51 @@ $('#title1').waypoint({
    */
   offset: '15%',
 });
- 
+
+$('#title0.animated').waypoint({
+  handler(direction) {
+    if (direction === 'down') {
+      $(this.element).addClass('fadeInUp');
+    }
+    else if (direction === 'up') {
+      $(this.element).removeClass('fadeInUp');
+    }
+  },
+  /**
+   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
+   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
+   */
+  offset: '30%',
+  activeTitle: 'title-0',
+});
+
+/* title1 エフェクト（下→上）  */
+/**
+ * animatedクラスを持つ要素が画面内に入ったら
+ * Animate.cssのfadeOutUpエフェクトを適用
+ */
+$('#title1').waypoint({
+  handler(direction) {
+    if (direction === 'down') {
+      $(this.element).removeClass('no-active').removeClass('fadeOutUp');
+    }
+    else if (direction === 'up') {
+      $(this.element).addClass('fadeOutUp');
+    }
+  },
+  /**
+   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
+   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
+   */
+  offset: '15%',
+});
+
 $('#title1.animated').waypoint({
   handler(direction) {
     if (direction === 'down') {
       $(this.element).addClass('fadeInUp');
-    }else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).removeClass('fadeInUp');
     }
   },
@@ -56,9 +123,10 @@ $('#title1.animated').waypoint({
 
 $('#title2').waypoint({
   handler(direction) {
-    if(direction === 'down'){
+    if (direction === 'down') {
       $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    } else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).addClass('fadeOutUp');
     }
   },
@@ -73,7 +141,8 @@ $('#title2.animated').waypoint({
   handler(direction) {
     if (direction === 'down') {
       $(this.element).addClass('fadeInUp');
-    }else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).removeClass('fadeInUp');
     }
   },
@@ -88,9 +157,10 @@ $('#title2.animated').waypoint({
 
 $('#title3').waypoint({
   handler(direction) {
-    if(direction === 'down'){
+    if (direction === 'down') {
       $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    } else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).addClass('fadeOutUp');
     }
   },
@@ -105,7 +175,8 @@ $('#title3.animated').waypoint({
   handler(direction) {
     if (direction === 'down') {
       $(this.element).addClass('fadeInUp');
-    }else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).removeClass('fadeInUp');
     }
   },
@@ -120,9 +191,10 @@ $('#title3.animated').waypoint({
 
 $('#title4').waypoint({
   handler(direction) {
-    if(direction === 'down'){
+    if (direction === 'down') {
       $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    } else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).addClass('fadeOutUp');
     }
   },
@@ -137,7 +209,8 @@ $('#title4.animated').waypoint({
   handler(direction) {
     if (direction === 'down') {
       $(this.element).addClass('fadeInUp');
-    }else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).removeClass('fadeInUp');
     }
   },
@@ -152,9 +225,10 @@ $('#title4.animated').waypoint({
 
 $('#title5').waypoint({
   handler(direction) {
-    if(direction === 'down'){
+    if (direction === 'down') {
       $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    } else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).addClass('bounce');
     }
   },
@@ -169,7 +243,8 @@ $('#title5.animated').waypoint({
   handler(direction) {
     if (direction === 'down') {
       $(this.element).addClass('fadeInUp').addClass('bounce');;
-    }else if(direction === 'up'){
+    }
+    else if (direction === 'up') {
       $(this.element).removeClass('fadeInUp');
     }
   },

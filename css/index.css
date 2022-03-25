@@ -184,6 +184,8 @@ li {
 /*-------------------------------------------
 Title
 -------------------------------------------*/
+#top,
+#title0,
 #title1,
 #title2,
 #title3,
@@ -201,6 +203,16 @@ Title
   background-repeat: no-repeat;
   background-position: 0% 30%;
   background-size: cover;
+}
+
+#top {
+  background-image: url("../img/godown.jpg");
+  z-index: 1;  
+}
+
+#title0 {
+  background-image: url("../img/view1.jpg");
+  z-index: 1;
 }
 
 #title1 {
@@ -226,6 +238,27 @@ Title
 #title5 {
   background-image: url("../img/partner.jpg");
   z-index: 1;
+}
+
+#top .section-title {
+  border-bottom-color: #000000;
+  font-size: 35px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  position: relative;
+  top: 75%;
+  left: -30%;
+}
+
+#title0 .section-title {
+  border-bottom-color: #000000;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  position: relative;
+  top: 65%;
+  left: 0%;
 }
 
 #title1 .section-title {
