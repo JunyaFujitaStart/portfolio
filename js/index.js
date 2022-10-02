@@ -1,256 +1,94 @@
-// オリジナルサイト画像のスライダー  
+//=require bootstrap
+//= require jquery
+//= require rails-ujs
+/*global $*/
+
+// 起動済み、js A↓
+// window.onload = function(){
+//   alert('js!');
+// }
+
+// 起動済み、js B↓
+// $(function() {
+//     $('.image_slider').slick({
+//         dots: true,
+//     });
+// });
+
+// 起動済み、js C↓
 $(function() {
-  $('.slider').slick({
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 2750,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true
-  });
+    $('.image_slider').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+});			
+
+
+// modal.js
+const buttonOpen = document.getElementById('modalOpen');
+const modal = document.getElementById('easyModal');
+const buttonClose = document.getElementsByClassName('modalClose')[0];
+
+// ボタンがクリックされた時
+buttonOpen.addEventListener('click', modalOpen);
+function modalOpen() {
+  modal.style.display = 'block';
+}
+
+// バツ印がクリックされた時
+buttonClose.addEventListener('click', modalClose);
+function modalClose() {
+  modal.style.display = 'none';
+}
+
+// モーダルコンテンツ以外がクリックされた時
+addEventListener('click', outsideClose);
+function outsideClose(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
+
+//menber_activity.js
+$(function() {
+  $('.menber_activity').slick({
+      dots: true
+      });
 });
 
-/**
- * ------------------
- * イベントハンドラの登録
- * ------------------
- */
-$('#top').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-    }
-    else if (direction === 'up') {
-      $(this.element).addClass('fadeInUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '-20%',
-});
 
-$('#top.animated').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).addClass('fadeOutDown');
-    }
-    else if (direction === 'up') {
-      $(this.element).addClass('no-active').removeClass('fadeInUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '15%',
-  activeTitle: 'top',
-});
- 
-$('#title0').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).addClass('fadeOutUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '15%',
-});
 
-$('#title0.animated').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).addClass('fadeInUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).removeClass('fadeInUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '30%',
-  activeTitle: 'title-0',
-});
-
-/* title1 エフェクト（下→上）  */
-/**
- * animatedクラスを持つ要素が画面内に入ったら
- * Animate.cssのfadeOutUpエフェクトを適用
- */
-$('#title1').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).addClass('fadeOutUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '15%',
-});
-
-$('#title1.animated').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).addClass('fadeInUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).removeClass('fadeInUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '30%',
-  activeTitle: 'title-1',
-});
-
-/* title2 エフェクト（下→上）  */
-
-$('#title2').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).addClass('fadeOutUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '25%',
-});
-
-$('#title2.animated').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).addClass('fadeInUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).removeClass('fadeInUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '30%',
-});
-
-/* title3 エフェクト（下→上）  */
-
-$('#title3').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).addClass('fadeOutUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '40%',
-});
-
-$('#title3.animated').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).addClass('fadeInUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).removeClass('fadeInUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '45%',
-});
-
-/* title4 エフェクト（下→上）  */
-
-$('#title4').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).addClass('fadeOutUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '55%',
-});
-
-$('#title4.animated').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).addClass('fadeInUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).removeClass('fadeInUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '65%',
-});
-
-/* title5 エフェクト（下→上）  */
-
-$('#title5').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).removeClass('no-active').removeClass('fadeOutUp');
-    }
-    else if (direction === 'up') {
-      $(this.element).addClass('bounce');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '75%',
-});
-
-$('#title5.animated').waypoint({
-  handler(direction) {
-    if (direction === 'down') {
-      $(this.element).addClass('fadeInUp').addClass('bounce');;
-    }
-    else if (direction === 'up') {
-      $(this.element).removeClass('fadeInUp');
-    }
-  },
-  /**
-   * 要素の上端が画面のどの位置に来たときにhandlerメソッドを呼び出すか指定
-   * 0%なら画面の一番上、100%なら画面の一番下に来たときに呼び出される
-   */
-  offset: '85%',
-});

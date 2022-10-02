@@ -59,7 +59,7 @@ body {
   background-repeat: repeat;
 }
 
-a {
+li a {
   color: #ffffff;
   text-decoration: none;
 }
@@ -80,19 +80,14 @@ h2 {
   padding: 0 4%;
   text-align: center;
   width: 100vw;
-  /*display: flex;*/
 }
-
-/*.box, .box2 {*/
-/*  width: 50%;*/
-/*}*/
 
 /*-------------------------------------------
 ナビバー
 -------------------------------------------*/
+
 #navbar ul {
   width: 100%;
-  animation: bg-color 15s infinite;
 }
 
 #navbar li {
@@ -116,12 +111,12 @@ h2 {
 -------------------------------------------*/
 #header {
   height: 100px;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto 2vw auto;
   animation: bg-color 15s infinite;
-  
 }
 
 #header ul {
@@ -149,64 +144,52 @@ h2 {
 }
 
 /*-------------------------------------------
-コンタクト
+記事
 -------------------------------------------*/
-#contact {
-    background-image: url(../images/contact-bg.jpg);
-    min-height: 100vh;
+
+#blog1 {
+  margin: 5vw;
+  padding: 2vw;
+  width:90%;
+  background-color: #ffffff;
+  border: solid 1rem #696969;
+}
+.bloga{
+  height: 140rem;
 }
 
-form div {
-    margin-bottom: 14px;
-}
-label {
-    font-size: 1.125rem;
-    margin-bottom: 10px;
-    display: block;
-}
-input[type="text"],
-input[type="email"],
-textarea {
-    background: #fffafa;
-    border: 1px #000 solid;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1rem;
-}
-input[type="text"],
-input[type="email"]{
-    width: 100%;
-    max-width: 240px;
-}
-textarea {
-    width: 100%;
-    max-width: 480px;
-    height: 6rem;
-}
-input[type="submit"]{
-  font-size: 24px;
-  background-color: #d3d3d3;
-  border: 2px solid #000;
-  border-radius: 5px;
-  padding: 10px 30px;
-  font: bold;
-}
-input[type="submit"]:hover {
-  background-color: #b3b3b3;
-  color: #ffffff;
-  border: 2px solid #fff;
-}
-.end-message {
-  display: none;
+.blogb {
+  height: 185rem;
 }
 
-.false-message {
-  display: none;
+.blogc {
+  height: 175rem;
 }
 
-/*.fade-enter-active, .fade-leave-active {*/
-/*  transition: opacity .5s;*/
-/*}*/
-/*.fade-enter, .fade-leave-to /*.fade-leave-active below version 2.1.8 {
-  opacity: 0;
-}*/
+.blogd {
+  height: 80rem;
+}
+
+.title,.date{
+  height: 4rem;
+  padding-left: 1vw;
+  font-size: 1.8rem
+}
+
+.title{
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.date {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.content {
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  background-color: #ffffff;
+}

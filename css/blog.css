@@ -103,7 +103,7 @@ h2 {
 }
 
 #navbar .nav-list-left {
-  margin-left: 70vw;
+  margin-left: 64vw;
 }
 
 /*-------------------------------------------
@@ -228,7 +228,7 @@ article a {
   font: bold;
 }
 
-#blog3,#blog4,#blog5,#blog6 {
+#blog4,#blog5,#blog6 {
   display: none;
 }
 

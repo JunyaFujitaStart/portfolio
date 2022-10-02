@@ -1,0 +1,429 @@
+@charset "UTF-8";
+
+@keyframes bg-color {
+  0% {
+    background-color: #f1c40f;
+  }
+
+  10% {
+    background-color: #f1c40f;
+  }
+
+  20% {
+    background-color: #ffd700;
+  }
+
+  45% {
+    background-color: #ff1493;
+  }
+
+  60% {
+    background-color: #dda0dd;
+  }
+
+  75% {
+    background-color: #3498db;
+  }
+
+  80% {
+    background-color: #66cdaa;
+  }
+
+  90% {
+    background-color: #ffffe0;
+  }
+
+  100% {
+    background-color: #f1c40f;
+  }
+}
+
+/* 印刷用スタイル */
+@media print {
+  .animated {
+    /* すべて表示 */
+    opacity: 1;
+  }
+}
+
+html {
+  font-size: 100%;
+  font-family: 'El Messiri', sans-serif;
+}
+
+h1 {
+  width: 100%;
+  display: inline-block;
+  animation: bg-color 15s infinite;
+  padding-left: 3%;
+}
+
+body {
+  color: #ffffff;
+  font-size: 0.9rem;
+  display: block;
+  margin: 0 0 0 0;
+  width: 100vw;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.site-title {
+  line-height: 1px;
+  padding: 10px 0;
+}
+
+.site-title a {
+  display: block;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1vw;
+  border-bottom: solid 2px #4d260b;
+}
+
+.content-title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.wrapper {
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+  width: 100vw;
+}
+
+/*-------------------------------------------
+ナビバー
+-------------------------------------------*/
+#navbar ul {
+  height: 100px;
+  width: 100%;
+  animation: bg-color 15s infinite;
+  z-index: 10;
+}
+
+#navbar li {
+  display: inline-block;
+}
+
+#navbar .nav-title {
+  margin-left: 2vw;
+}
+
+#navbar a {
+  padding: 0 auto;
+}
+
+#navbar .nav-list-left {
+  margin-left: 64vw;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  height: 100px;
+  justify-content: space-between;
+  margin: 0 auto 2vw auto;
+  animation: bg-color 15s infinite;
+}
+
+#header ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+#header li {
+  margin-left: 30px;
+}
+
+#header .nav-title {
+  font-size: 2vw;
+}
+
+#header .nav-list-lef, #header .blog , #header .contact {
+  font-size: 1.2vw;
+}
+
+#header li a:hover {
+  opacity: 0.7;
+}
+
+/*-------------------------------------------
+スペース
+-------------------------------------------*/
+#space {
+  height: 600px;
+}
+
+#space2 {
+  height: 300px;
+}
+
+#profile {
+  height: 200px;
+}
+
+/*-------------------------------------------
+Title
+-------------------------------------------*/
+#top,
+#title0,
+#title1,
+#title2,
+#title3,
+#title4,
+#title5 {
+  color: #ffffff;
+  background-color: #f5deb3;
+  border-top: solid 5px #ffffff;
+  border-bottom: solid 5px #ffffff;
+  margin: 0 0 0 0;
+  padding-top: 1vw;
+  padding-bottom: 3vw;
+  height: 32vw;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: 0% 30%;
+  background-size: cover;
+}
+
+#top {
+  background-image: url("../img/godown.jpg");
+  z-index: 1;  
+}
+
+#title0 {
+  background-image: url("../img/view1.jpg");
+  z-index: 1;
+}
+
+#title1 {
+  background-image: url("../img/sunlight1.jpg");
+  z-index: 1;
+}
+
+#title2 {
+  background-image: url("../img/man1.jpg");
+  z-index: 1;
+}
+
+#title3 {
+  background-image: url("../img/woman1.jpg");
+  z-index: 1;
+}
+
+#title4 {
+  background-image: url("../img/man2.jpg");
+  z-index: 1;
+}
+
+#title5 {
+  background-image: url("../img/partner.jpg");
+  z-index: 1;
+}
+
+#top .section-title {
+  border-bottom-color: #000000;
+  font-size: 35px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  position: relative;
+  top: 75%;
+  left: -30%;
+}
+
+#title0 .section-title {
+  border-bottom-color: #000000;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  position: relative;
+  top: 65%;
+  left: 0%;
+}
+
+#title1 .section-title {
+  border-bottom-color: #000000;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  position: relative;
+  top: 45%;
+  left: -20%;
+}
+
+#title2 .section-title {
+  border-bottom-color: #000000;
+  color: #000000;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;  position: relative;
+  top: 45%;
+  left: 25%;
+}
+
+#title3 .section-title {
+  border-bottom-color: #000000;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  position: relative;
+  top: 25%;
+  left: -15%;
+}
+
+#title4 .section-title {
+  border-bottom-color: #000000;
+  color: #000000;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  position: relative;
+  top: 25%;
+  left: 15%;
+}
+
+#title5 .section-title {
+  border-bottom-color: #000000;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+  position: relative;
+  top: 15%;
+  left: 0%;
+}
+
+.no-active {
+  visibility: hidden
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about {
+  background-color: #f5deb3;
+  border-top: solid 5px #ffffff;
+  border-bottom: solid 5px #ffffff;
+  margin: 0 0 0 0;
+  padding-top: 1vw;
+  padding-bottom: 3vw;
+  width: 100vw;
+}
+
+#about .section-title {
+  color: #4d260b;
+  margin: 0;
+}
+
+#about .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about img {
+  margin: 0 6vw 4vw 0;
+  width: 100px;
+  height: 100px;
+  border: 10px 10px 10px 10px;
+  border-radius: 10%;
+  background-color: #ffffff;
+}
+
+#about .text {
+  color: #4d260b;
+  -webkit-text-stroke: 1px #4d260b;
+  text-stroke: 1px #4d260b;
+  text-align: left;
+}
+
+/*-------------------------------------------
+Site
+-------------------------------------------*/
+#site {
+  background-color: #4169e1;
+  border-top: solid 5px #ffffff;
+  border-bottom: solid 5px #ffffff;
+}
+
+#site .section-title {
+  margin-top: 3vw;
+}
+
+#site .slider {
+  border: solid 50px #ffffff;
+}
+
+#site ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#site li {
+  width: 45%;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  font-size: 0.5rem;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #000000;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+
+
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  #about .content {
+    flex-direction: column;
+  }
+
+  #about img {
+    margin-right: 0;
+  }
+
+  /*-------------------------------------------
+  Site
+    -------------------------------------------*/
+
+  #site ul {
+    flex-direction: column;
+  }
+
+  #site li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #site div .slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
